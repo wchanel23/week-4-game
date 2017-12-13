@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Crystal Collector</title>
+
+<style type="text/css">
+
+.diamond-image
+  {
+  width: 250px;
+  height: 150px;
+  margin-left: 200px;
+  }
+
+.emerald-image
+  {
+  width: 250px;
+  height: 150px;
+  }
+
+.heart-image
+  {
+  width: 125px;
+  height: 125px;
+  }
+
+.yellow-image
+  {
+  width: 125px;
+  height: 125px;
+  margin-left: 75px;
+  }
+
+</style>
+</head>
+
+<body>
+<h1>Number to Guess: <span id="number-to-guess"></span></h1>
+<div id="crystals">
+
+<img class="diamond-image" src="assets/images/diamond.jpg" alt="diamond"> 
+
+  <img class="emerald-image" src="assets/images/emerald.jpg" alt="emerald"> 
+
+  <img class="heart-image" src="assets/images/heart.jpg" alt="heart"> 
+
+  <img class="yellow-image" src="assets/images/yellow.jpg" alt="yellow"> 
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+  var targetNumber = 50;
+
+  // Here we set the "number-to-guess" header to match the "targetNumber".
+  // Eventually this will allow us to change the HTML to match the value in the JavaScript.
+  $("#number-to-guess").text(targetNumber);
+
+ var counter = 0;
+  // Here we created an on-click event that responds to button clicks of the crystal image.
+  $(".diamond-image").on("click", function() {
+
+       counter += 2;
+
+    // We then output the number of times the crystal is clicked.
+    alert("Your new score is: " + counter);
+
+        // Here we created some logic to "check" if the click counter matches the targetNumber.
+    // Remember, this click event will be triggered with each click.
+    // With each click the counter will increase by 10 and be re-evaluated against target.
+    if (counter === targetNumber) {
+
+      // If the numbers match we'll celebrate the user's win.
+      alert("You win!");
+    }
+
+        else if (counter >= targetNumber) {
+
+      // Then they are alerted with a loss.
+      alert("You lose!!");
+    }
+
+  });
+
+  $(".emerald-image").on("click", function() {
+
+       counter += 5;
+    // We then output the number of times the crystal is clicked.
+    alert("Your new score is: " + counter);
+
+        // Here we created some logic to "check" if the click counter matches the targetNumber.
+    // Remember, this click event will be triggered with each click.
+    // With each click the counter will increase by 10 and be re-evaluated against target.
+    if (counter === targetNumber) {
+
+      // If the numbers match we'll celebrate the user's win.
+      alert("You win!");
+    }
+
+        else if (counter >= targetNumber) {
+
+      // Then they are alerted with a loss.
+      alert("You lose!!");
+    }
+
+  });
+
+  $(".heart-image").on("click", function() {
+    counter += 7;
+
+    // We then output the number of times the crystal is clicked.
+    alert("Your new score is: " + counter);
+
+        // Here we created some logic to "check" if the click counter matches the targetNumber.
+    // Remember, this click event will be triggered with each click.
+    // With each click the counter will increase by 10 and be re-evaluated against target.
+    if (counter === targetNumber) {
+
+      // If the numbers match we'll celebrate the user's win.
+      alert("You win!");
+    }
+
+    else if (counter >= targetNumber) {
+
+      // Then they are alerted with a loss.
+      alert("You lose!!");
+    }
+
+  });
+
+  $(".yellow-image").on("click", function() {
+
+        counter += 9;
+
+    // We then output the number of times the crystal is clicked.
+    alert("Your new score is: " + counter);
+
+        // Here we created some logic to "check" if the click counter matches the targetNumber.
+    // Remember, this click event will be triggered with each click.
+    // With each click the counter will increase by 10 and be re-evaluated against target.
+    if (counter === targetNumber) {
+
+      // If the numbers match we'll celebrate the user's win.
+      alert("You win!");
+    }
+
+    else if (counter >= targetNumber) {
+
+      // Then they are alerted with a loss.
+      alert("You lose!!");
+    }
+  });
+
+  </script>
+</body>
+</html>
